@@ -1,6 +1,3 @@
-FROM 0x01be/yosys as yosys
-FROM 0x01be/nextpnr:ecp5 as nextpnr
-
 FROM alpine:3.12.0
 
 RUN apk add --no-cache build-base --virtual build-dependencies \
