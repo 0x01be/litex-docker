@@ -1,9 +1,6 @@
-FROM alpine:3.12.0
+FROM 0x01be/alpine:edge
 
-RUN apk add --no-cache --virtual build-dependencies \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+RUN apk add --no-cache --virtual litex-build-dependencies \
     build-base \
     dtc \
     git \
