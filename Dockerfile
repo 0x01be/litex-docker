@@ -1,4 +1,4 @@
-FROM 0x01be/alpine:edge
+FROM alpine as builder
 
 RUN apk add --no-cache --virtual litex-build-dependencies \
     build-base \
