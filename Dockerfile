@@ -13,7 +13,9 @@ RUN apk add --no-cache --virtual litex-build-dependencies \
     boost-python3 \
     boost-dev
 
-ADD https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py .
+ADD https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py /litex/
+
+WORKDIR /litex
 
 RUN /usr/bin/python3 ./litex_setup.py init
 RUN /usr/bin/python3 ./litex_setup.py install
